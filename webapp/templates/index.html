@@ -7,10 +7,10 @@
     <h5 class="card-title">Под заголовок: {{book.subtitle}}</h5>
     <p class="card-text">Описание: {{book.description}}</p>
   </div>
-  <a href="{% url 'webapp:view' book.pk %}">Дитальный просмотр</a>
+  <a href="{% url 'webapp:view' book.pk %}">Детальный просмотр</a>
   <li><a href="{% url 'webapp:delete'  book.pk %}">Удалить</a></li>
 
-  <button type="button" class="add" id="{{ obj.id }}" data-id="{{ obj.id }}">Добавить в избрынный </button></div>
+  <button type="button" class="add" id="{{ obj.id }}" data-id="{{ obj.id }}">Добавить в избранное </button></div>
 {% endfor %}
  {% endblock %}
 
@@ -24,7 +24,7 @@
                 $.ajax({
                     url: `http://127.0.0.1:8000/book/remove/${id}/`,
                     success: function (data) {
-                        btn.text("Добавить в избранных");
+                        btn.text("Добавить в избранное");
                         btn.attr('class', 'add');
                     }
                 });

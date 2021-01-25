@@ -6,7 +6,7 @@ from django.views.generic import ListView, CreateView, DeleteView, DetailView
 from django.urls import reverse
 from webapp.forms import BookAddForm
 from webapp.models import Book
-
+              
 
 class IndexView(ListView):
     template_name = 'index.html'
